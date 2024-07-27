@@ -60,6 +60,7 @@ namespace Personal_Console_App
 				MenuTitle();
 
 				Console.WriteLine("1. Net Salary, NI and Tax Calculator from Gross Salary input");
+				Console.WriteLine("2. Net Salary, NI and Tax Calculator from Hourly wage input");
 
 				Console.WriteLine("\r\n\r\nQ. Back to Main Menu\r\n\r\n");
 
@@ -70,6 +71,7 @@ namespace Personal_Console_App
 				switch (personalmenuresponse)
 				{
 					case "1": PersonalPrograms.CalculatorFromGrossSalary(); break;
+					case "2": PersonalPrograms.CalculatorFromHourlyWage(); break;
 					case "q":
 					case "Q":
 						return;
