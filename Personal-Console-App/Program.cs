@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Personal_Console_App;
 
 namespace Personal_Console_App
 {
@@ -42,14 +43,14 @@ namespace Personal_Console_App
 
 				switch (mainmenuresponse)
 				{
-					case "1": PersonalPrograms(); break;
+					case "1": PersonalProgramsMenu(); break;
 					case "q": Environment.Exit(0); break;
 					case "Q": Environment.Exit(0); break;
 				}
 			}
 		}
 
-		internal static void PersonalPrograms()
+		internal static void PersonalProgramsMenu()
 		{
 			string personalmenuresponse = "";
 
@@ -58,7 +59,7 @@ namespace Personal_Console_App
 			{
 				MenuTitle();
 
-				Console.WriteLine("1. ");
+				Console.WriteLine("1. Net Salary, NI and Tax Calculator from Gross Salary input");
 
 				Console.WriteLine("\r\n\r\nQ. Back to Main Menu\r\n\r\n");
 
@@ -68,7 +69,7 @@ namespace Personal_Console_App
 
 				switch (personalmenuresponse)
 				{
-					case "1": break;
+					case "1": PersonalPrograms.CalculatorFromGrossSalary(); break;
 					case "q":
 					case "Q":
 						return;
