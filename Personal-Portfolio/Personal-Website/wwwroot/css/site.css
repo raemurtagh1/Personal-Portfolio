@@ -1,18 +1,73 @@
+/* MAIN PAGE*/
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+/* HEADER / NAV BAR */
+.header-main {
+    height: 115px;
+    background-color: ghostwhite;
+    width: 100%;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    position: relative;
+    bottom: 5px;
+    right: 34px;
+}
+
+.navbar-nav {
+    position: relative;
+    left: 5px;
+    bottom: 13px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item {
+    width: 11%;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: darkgray;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+    transform: translateX(-50%);
+}
+
+/* HOME PAGE */
+.index {
+    background: linear-gradient(#f8f8ff, #dfdfff);
+    width: 100%;
+}
+
+    .index.home {
+        max-height: 380px;
+        height: 380px;
+    }
+
+.profile-pic {
+    width: 80%;
+    height: 90%;
 }
